@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hello!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Time is: ' + ${serverTime} + '!'" />
+
+	<p>Test passing name and age as POST variables:</p>
+	<form action="/hellomvc/form_input1" method="POST">
+		Name: <input name="name"><br /> 
+		Age: <input name="age"><br /> 
+		<input type="submit" value="Submit data">
+	</form>			
+	
+	
+	<p>Test passing name and age as POST object (Person):</p>
+	<form action="/hellomvc/form_input2" method="POST">
+		Name: <input name="name"><br /> 
+		Age: <input name="age"><br /> 
+		Hobbies: <textarea name="hobbies"></textarea><br /> 
+		<input type="submit" value="Submit data">
+	</form>	
+</body>
+</html>
